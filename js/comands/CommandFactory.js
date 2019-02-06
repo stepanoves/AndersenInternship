@@ -10,6 +10,6 @@ CommandFactory.commands = {
     },
 
     'mul' : (receiver, source) => {
-        return receiver * source;
+        return +receiver * +source;
     }
 }  

@@ -1,14 +1,13 @@
-class Stack {
-    constructor() {
-        this.__stack = [];
-    }
+const stack = (function() {
+    const stack = [];
 
-    push(el) {
-        this.__stack.push(el);
-    }
+    return {
+        push: (el) => {
+            this.__stack.push(el);
+        },
 
-    pop() {
-        return this.__stack.pop(); ;
+        pop: () => {
+            return this.__stack.pop(); ;
+        }
     }
-    
-} 
+})()
