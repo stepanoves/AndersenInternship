@@ -6,4 +6,4 @@
     doButton.addEventListener('click', () => {
         WriterExecutor.execute(writerType.value, CommandExecutor.execute(commandParser(operation.value)), memory);
     });
-})();
+})();  

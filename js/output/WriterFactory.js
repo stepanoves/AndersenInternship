@@ -8,4 +8,4 @@ WriterFactory.writers = {
     'display': (data) => { alert(data); },
     'console': (data) => { console.log(data); },
     'memory' : (data, stack) => { stack.push(data) }
-};
+};  
