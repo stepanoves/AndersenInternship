@@ -6,7 +6,7 @@ class CommandFactory {
 
 CommandFactory.commands = {
     'add' : (receiver, source) => {
-        return receiver + source;
+        return +receiver + +source;
     },
 
     'mul' : (receiver, source) => {
