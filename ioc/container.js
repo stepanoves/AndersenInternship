@@ -9,19 +9,20 @@ class Container {
 
     setDependencies(key, dependenciesArray) {
         this.__map.get(key).dependenciesArray = dependenciesArray;
-        console.log(this.__map.get(key).dependenciesArray)
     }
 
     getDependencies(key) {
-        if (this.__map.get(key).dependenciesArray !== undefined) {
+        const dependencies = this.__map.get(key).dependenciesArray;
+        if (dependencies) {
             return this.__map.get(key).dependenciesArray.map((el) => {
-                return this.get(el);
+                if (typeof dependencies === 'function') return this.get(el);
+                return el;
             });
         }
     }
     get(key) {
         const className = this.__map.get(key).className;
-        if (this.getDependencies(key) !== undefined) {
+        if (this.getDependencies(key)) {
             return new className(...this.getDependencies(key))
         } else {
             return new className()
@@ -31,12 +32,17 @@ class Container {
 
 
 class Car {
-    constructor(wheel) {
+    constructor(name, wheel) {
         this.__wheel = wheel;
+        this.__name = name;
     }
 
     getWheel() {
         return this.__wheel.getName();
+    }
+
+    getName() {
+        return this.__name;
     }
 }
 
@@ -63,11 +69,10 @@ class Wheel2 {
 const cntr = new Container();
 cntr.register('wheel', Wheel);
 cntr.register('wheel2', Wheel2);
-cntr.register('car', Car, ['wheel']);
+cntr.register('car', Car, ['bmw','wheel2']);
 
-var car = cntr.get('car');
-console.log(car.getWheel())
+console.log(cntr.get('car').getName())
 
-cntr.setDependencies('car', ['wheel2']);
-car = cntr.get('car');
-console.log(car.getWheel())
+// cntr.setDependencies('car', ['audi','wheel2']);
+// car = cntr.get('car');
+// console.log(car.getWheel())
