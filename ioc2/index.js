@@ -1,4 +1,5 @@
-const cntr = new Container();
-cntr.run(Main);
+Container.register(Car);
+Container.register(Wheel2);
+Container.register(Wheel);
 
-console.log(Injector.get(Car));
+Container.run(Main);

@@ -6,6 +6,7 @@ class Car {
     getWheel() {
         return this.__wheel.getName();
     }
+
 }
 
-Car.$inject = [Wheel];
+Car.$inject = [Wheel2];
