@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mini PC</title>
+</head>
+<body>
+    <input type="text" id="operation" placeholder="Enter operation"></input>
+    <label for='writer-type'>Writer Type</label>
+    <select id="writer-type">
+            <option>console</option>
+            <option>display</option>
+            <option>memory</option>
+    </select>
+    <button id='do'>Do</button>
+
+    <script src="js/stack/Stack.js"></script>
+    <script src="./js/comands/CommandFactory.js"></script>
+    <script src="./js/comands/CommandExecutor.js"></script>
+    <script src="./js/comands/CommandParser.js"></script>
+    <script src="./js/output/WriterFactory.js"></script>
+    <script src="./js/output/WriterExecutor.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>
