@@ -3,11 +3,11 @@ const stack = (function() {
 
     return {
         push: (el) => {
-            this.__stack.push(el);
+            stack.push(el);
         },
 
         pop: () => {
-            return this.__stack.pop(); ;
+            return stack.pop(); ;
         }
     }
 })()
