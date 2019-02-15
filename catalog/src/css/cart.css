@@ -1,0 +1,40 @@
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header {
+    padding-top: 5px;
+    display: flex;
+}
+
+.cart-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.cart-item {
+    display: flex;
+    border: 1px solid silver;
+    flex-basis: 50%;
+    justify-content: space-around;
+}
+
+.item-name {
+    flex: 3;
+}
+
+.item-quantity {
+    flex: 1;
+}
+
+.item-total-cost {
+    flex: 1;
+}
+.cart-item-remove-btn {
+    height: 30px;
+    margin-top: 10px;
+}
