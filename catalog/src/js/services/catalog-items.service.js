@@ -1,4 +1,4 @@
-class CatalogItemsService {
+export default class CatalogItemsService {
 
     fetchData() {
         return new Promise((resolve, reject) => {

@@ -1,4 +1,4 @@
-class Container {
+export default class Container {
 
     static register(token, className) {
         Container.__map.set(token, className);

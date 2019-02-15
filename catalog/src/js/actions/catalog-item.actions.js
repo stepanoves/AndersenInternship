@@ -1,17 +1,10 @@
-class CatalogItemActions {
-    addToCartClick(itemName, itemQuantity) {
-        if (!localStorage.getItem('cartMap')) {
-            console.log(1);
-            localStorage.setItem('cartMap',  JSON.stringify(Array.from(new Map().entries())));
-        }
-
-        const cartMap = new Map(JSON.parse(localStorage.getItem('cartMap')))
-        if (cartMap.has(itemName)) {
-            cartMap.set(itemName, +cartMap.get(itemName) + +itemQuantity);
-        } else {
-            cartMap.set(itemName, itemQuantity);
-        }
-
-        localStorage.setItem('cartMap',  JSON.stringify(Array.from(cartMap.entries())));
+export default class CatalogItemActions {
+    constructor(catalogItemService) {
+        this.catalogItemService = catalogItemService;
+    }
+    async addToCartClick(itemName, itemQuantity) {
+        await this.catalogItemService.fetchData(itemName, itemQuantity)
     }
 }
+
+CatalogItemActions.$inject = ['catalogItemService'];

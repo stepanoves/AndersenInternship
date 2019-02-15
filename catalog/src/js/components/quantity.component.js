@@ -1,8 +1,9 @@
-class QuantityComponent {
+export default class QuantityComponent {
     constructor(quantityAction) {
         this.quantityAction = quantityAction;
     }
-    generate() {
+    
+    render() {
         const quantityPanel = document.createElement('div');
         quantityPanel.className = 'quantity-panel';
         

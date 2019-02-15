@@ -1,10 +1,10 @@
-class CatalogItemComponent {
+export default class CatalogItemComponent {
     constructor(quantityComponent, catalogItemActions) {
         this.quantityComponent = quantityComponent;
         this.catalogItemActions = catalogItemActions;
     }
 
-    generate(data) {
+    render(data) {
         const item = document.createElement('div');
         item.className = 'item';
 
@@ -22,14 +22,14 @@ class CatalogItemComponent {
         itemInfo.className = 'item-info';
         itemInfo.innerHTML = `<p>${data.description}</p>`
 
-        const quantity = this.quantityComponent.generate();
+        const quantity = this.quantityComponent.render();
 
         const addBtn = document.createElement('button');
         addBtn.className = 'add-btn';
         addBtn.innerText = 'Add to cart';
 
         addBtn.addEventListener('click', 
-            (e) => this.catalogItemActions.addToCartClick(data.name, quantity.querySelector('.quantity').value));
+            async(e) => await this.catalogItemActions.addToCartClick(data.name, quantity.querySelector('.quantity').value));
 
         itemPhotoDiv.appendChild(itemPhotoImg);
         item.appendChild(name);

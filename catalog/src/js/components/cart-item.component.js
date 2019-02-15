@@ -1,10 +1,10 @@
-class CartItemComponent {
+export default class CartItemComponent {
 
     constructor(cartItemActions) {
         this.cartItemActions = cartItemActions;
     }
 
-    generate(name, quantity) {
+    render(name, quantity) {
         const cartItem = document.createElement('div');
         cartItem.className = 'cart-item';
 

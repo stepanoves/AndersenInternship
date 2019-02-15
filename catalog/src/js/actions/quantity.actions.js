@@ -1,4 +1,4 @@
-class QuantityActions {
+export default class QuantityActions {
     changeQuantityClick(event, input) {
         if (event.target.innerText === '+') {
             input.value = +input.value + 1;
