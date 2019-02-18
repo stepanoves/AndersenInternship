@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Fish1",
+        "description": "It is fish 1",
+        "imgLink": "empty.jpg"
+    },
+    {
+        "name": "Fish2",
+        "description": "It is fish 2",
+        "imgLink": "empty.jpg"
+    },
+    {
+        "name": "Fish3",
+        "description": "It is fish 3",
+        "imgLink": "empty.jpg"
+    },
+    {
+        "name": "Fish4",
+        "description": "It is fish 4",
+        "imgLink": "empty.jpg"
+    },
+    {
+        "name": "Fish5",
+        "description": "It is fish 5",
+        "imgLink": "empty.jpg"
+    },
+    {
+        "name": "Fish6",
+        "description": "It is fish 6",
+        "imgLink": "empty.jpg"
+    }
+]
